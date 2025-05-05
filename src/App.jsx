@@ -3,6 +3,7 @@ import { Accessibility } from "lucide-react";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import { BrowserRouter ,Routes , Route } from "react-router-dom";
+import MobileNavbar from "./components/navbar/MobileNavbar";
 
 function App() {
 
