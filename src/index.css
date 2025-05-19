@@ -11,3 +11,28 @@
 body {
     font-family: 'Poppins' , sans-serif;
 }
+
+/* For Webkit browsers like Chrome, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px; /* Height of horizontal scrollbar */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc; /* Thumb color */
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #aaa; /* Thumb color on hover */
+  }
+  
+  /* For Firefox (limited styling) */
+  .custom-scrollbar {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #ccc #f1f1f1; /* thumb and track color */
+  }
