@@ -46,6 +46,7 @@ const products = [
     image: cameraScoop,
     discount: 60,
     status: "hot",
+    category:'CAMERAS'
   },
   {
     name: "DualShock Controller A",
@@ -95,6 +96,7 @@ const products = [
     image: tv,
     discount: 5,
     status: "hot",
+    category:"COMPUTERS"
   },
   {
     name: "Precision Gaming Mouse Elite",

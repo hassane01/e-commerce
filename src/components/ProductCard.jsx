@@ -2,7 +2,7 @@
 import React from 'react';
 import { ShoppingCart, HeartPlus } from 'lucide-react'; // Icons used in the card
 
-const ProductCard = ({ product }) => {
+const ProductCard = React.memo (({ product }) => {
   const discountedPrice = product.discount
     ? (product.price * (1 - product.discount / 100)).toFixed(2)
     : product.price.toFixed(2);
@@ -72,6 +72,6 @@ const ProductCard = ({ product }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductCard;
