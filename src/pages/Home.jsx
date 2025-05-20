@@ -7,6 +7,7 @@ import Newsletter from '../components/Newsletter'
 import Footer from '../components/footer/Footer'
 
 const Home = () => {
+  
   return (
     <>
       <HomeSlider/>

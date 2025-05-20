@@ -1,8 +1,10 @@
 // src/components/ProductCard/ProductCard.jsx
 import React from 'react';
 import { ShoppingCart, HeartPlus } from 'lucide-react'; // Icons used in the card
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = React.memo (({ product }) => {
+  const navigate = useNavigate()
   const discountedPrice = product.discount
     ? (product.price * (1 - product.discount / 100)).toFixed(2)
     : product.price.toFixed(2);
@@ -10,7 +12,7 @@ const ProductCard = React.memo (({ product }) => {
   const status = product.status?.toUpperCase();
 
   return (
-    <div className="bg-[#f8f9fa] w-full relative group overflow-hidden">
+    <div className="bg-[#f8f9fa] w-full relative group overflow-hidden" onClick={()=>navigate(`/item/${product.id}` , {state:product})}>
       {/* Image and Status Badge Section */}
       <div className="relative overflow-hidden">
         <img
@@ -25,7 +27,7 @@ const ProductCard = React.memo (({ product }) => {
                 ? 'bg-blue-500'
                 : status === 'HOT'
                 ? 'bg-orange-500'
-                : 'bg-green-500' // Default or other status color
+                : 'bg-green-500' 
             }`}
           >
             {status}
