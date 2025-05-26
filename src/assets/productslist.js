@@ -28,6 +28,7 @@ const productslist = [
     status: "hot",
     category: "ACCESSORIES",
     dateAdded: "2025-05-01",
+    availablity:'IN STOCK',
     sales: 245,
     description: "High-fidelity pro gaming headset with noise-cancelling mic and RGB lighting.",
     longDescription: "Experience immersive gaming audio with the Pro Gaming Headset X1. This headset features high-fidelity sound drivers for crystal-clear audio, a noise-cancelling microphone to ensure your voice is heard perfectly, and customizable RGB lighting to match your gaming setup.\n\nThe ergonomic design and plush earcups provide comfort for long gaming sessions. Durable construction ensures it can withstand intense use. Compatible with PC, PS5, Xbox Series X/S, and Nintendo Switch.",
