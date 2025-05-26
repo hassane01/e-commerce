@@ -49,7 +49,7 @@ const RightSidenav = () => {
   return (
     <div className='flex justify-end items-center md:space-x-9 text-sm font-semibold md:flex-grow'>
       <Search className='cursor-pointer' size='28px' strokeWidth='1.5px' />
-      <div className='hidden lg:flex items-center space-x-3 cursor-pointer' > {/* Updated route for clarity */}
+      <div className='hidden lg:flex items-center space-x-3 cursor-pointer' onClick={()=>{navigate('/account')}} > {/* Updated route for clarity */}
         <CircleUser color='black' size='28px' strokeWidth='1.5px' />
         <span>ACCOUNT</span> {/* You might want to change this to "WISHLIST" or have a separate icon */}
       </div>
