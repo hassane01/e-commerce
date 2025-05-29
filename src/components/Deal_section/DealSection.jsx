@@ -11,7 +11,7 @@ const DealSection = () => {
             <button className= 'text-[20px] font-bold text-white bg-[#f36523] py-2 px-6 '>SHOP NOW</button>
         </div>
         <div className=''>
-            <img src={weeklydeal.imagProduct} alt="" />
+            <img src={weeklydeal.imagProduct} alt="icon" />
         </div>
     </section>
   )

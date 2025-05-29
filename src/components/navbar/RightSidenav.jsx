@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, CircleUser, ShoppingBasket, X } from 'lucide-react'; // Added X for close icon
-import { useSelector, useDispatch } from 'react-redux'; // Added useDispatch
+import { useSelector } from 'react-redux'; // Added useDispatch
 import { useNavigate } from 'react-router-dom';
 import { TbShoppingBagHeart } from 'react-icons/tb';
+import SearchBarComp from './SearchBarComp';
 // Import actions if you want to remove/update items directly from dropdown
 // import { removeItem, updateItemQuantity } from '../../features/cart/cartSlice'; // ADJUST PATH
 
-const RightSidenav = () => {
+const RightSidenav = ({toggleSearch}) => {
   const navigate = useNavigate();
+  
 
   const cartItems = useSelector((state) => state.cart.items);
   const totalCartQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -47,9 +49,12 @@ const RightSidenav = () => {
   // };
 
   return (
+   
     <div className='flex justify-end items-center md:space-x-9 text-sm font-semibold md:flex-grow'>
-      <Search className='cursor-pointer' size='28px' strokeWidth='1.5px' />
+      <Search className='cursor-pointer' size='28px' strokeWidth='1.5px' onClick={toggleSearch}/>
+        
       <div className='hidden lg:flex items-center space-x-3 cursor-pointer' onClick={()=>{navigate('/account')}} > {/* Updated route for clarity */}
+      
         <CircleUser color='black' size='28px' strokeWidth='1.5px' />
         <span>ACCOUNT</span> {/* You might want to change this to "WISHLIST" or have a separate icon */}
       </div>
@@ -145,7 +150,9 @@ const RightSidenav = () => {
           </div>
         )}
       </div>
+      
     </div>
+    
   );
 };
 
